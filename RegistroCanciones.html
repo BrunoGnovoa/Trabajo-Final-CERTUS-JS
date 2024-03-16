@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            text-align: center;
+            width: 100%;
+            padding: 0px;
+            padding-bottom: 20px;
+            background-color: #4EF581;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4EF5BB;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3FBCF2;
+            color: #fff;
+        }
+
+        .success, .error {
+            color: rgb(255, 255, 255);
+            padding: 5px;
+            margin: 5px 0 15px 0px;
+        }
+
+        .success {
+            background: #0738F7;
+        }
+
+        .error {
+            background: red;
+        }
+
+    </style>
+    <!--<style>
+        .success, .error {
+            color: rgb(255, 255, 255);
+            padding: 5px;
+            margin: 5px 0 15px 0px;
+        }
+
+        .success {
+            background: rgb(0, 133, 0);
+        }
+
+        .error {
+            background: red;
+        }
+    </style>-->
+    <title>Registro de Canciones</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Canciones</h1>
+        <form id="song-form">
+            <div>
+                <label for="title">Titulo</label>
+                <input type="text" id="title" class="u-full-width">
+            </div>
+            <div>
+                <label for="artist">Artista</label>
+                <input type="text" id="artist" class="u-full-width">
+            </div>
+            <div>
+                <label for="composer">Compositor</label>
+                <input type="text" id="composer" class="u-full-width">
+            </div>
+            <div>
+                <label for="year">Año</label>
+                <input type="text" id="year" class="u-full-width">
+            </div>
+            <div>
+                <input type="submit" value="Registrar" class="u-full-width">
+            </div>
+        </form>
+
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Artista</th>
+                    <th>Compositor</th>
+                    <th>Año</th>
+                    <th>Acciones</th> <!-- nueva columna para las acciones -->
+                </tr>
+            </thead>
+            <tbody id="song-list">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="RegistroCanciones.js"></script>
+</body>
+</html>
